@@ -11,14 +11,18 @@ function distanceFromHqInFeet(blocks) {
     return distanceFromHqInBlocks(blocks) * 264;
 }
 
+// function distanceTravelledInFeet(starting_block, ending_block) {
+//     if (starting_block > ending_block) {
+//         var distanceInBlocks = starting_block - ending_block;
+//         return distanceInBlocks * 264;
+//     } else {
+//         var distanceInBlocks = ending_block - starting_block;
+//         return distanceInBlocks * 264;
+//     }
+// }
+
 function distanceTravelledInFeet(starting_block, ending_block) {
-    if (starting_block > ending_block) {
-        var distanceInBlocks = starting_block - ending_block;
-        return distanceInBlocks * 264;
-    } else {
-        var distanceInBlocks = ending_block - starting_block;
-        return distanceInBlocks * 264;
-    }
+    return Math.abs(starting_block - ending_block) * 264;
 }
 
 function calculatesFarePrice(start, destination) {
